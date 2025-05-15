@@ -1,0 +1,13 @@
+.app {
+  font-family: sans-serif;
+  padding: 2rem;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
