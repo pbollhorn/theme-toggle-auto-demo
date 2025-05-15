@@ -15,5 +15,5 @@ body {
   font-family: system-ui, sans-serif;
   background-color: var(--bg);
   color: var(--fg);
-  transition: background-color 0.3s, color 0.3s;
+  /* transition: background-color 0.3s, color 0.3s; */
 }

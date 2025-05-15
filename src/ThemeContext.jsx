@@ -8,9 +8,21 @@ export function ThemeProvider({ children }) {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  // useEffect(() => {
+  //   document.body.className = theme;
+  // }, [theme]);
+
   useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+    // Create a media query
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    console.log(mediaQuery);
+
+    if (mediaQuery.matches) {
+      document.body.className = "dark";
+    } else {
+      document.body.className = "light";
+    }
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
